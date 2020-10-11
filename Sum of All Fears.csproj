@@ -87,12 +87,12 @@
     <Content Include="Scripts\util.js" />
     <Content Include="favicon.ico" />
     <Content Include="Index.html" />
-    <Content Include="Images\sumAF-bg.png" />
     <Content Include="Images\favicon-32x32.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Images\Sum Challenge-bg2.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

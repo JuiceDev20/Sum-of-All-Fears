@@ -51,7 +51,7 @@
                         <a class="nav-link" href="#">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                        <a class="nav-link" href="#">Blog Post</a>
                     </li>
                 </ul>
             </div>
@@ -61,28 +61,74 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col align-content-center text-danger"><em><h1>The Sum of All Fears Challenge</h1></em></div>
-                <div class="col align-items-md-center"></div>
-                <p class="text-dark"></p>
-                <p class="text-dark"></p>
+                <div class="col align-content-center text-warning"><h1>The Sum of All Fears Challenge</h1></div>
+             </div>
+        </div>
+    </section>
+    <hr />
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-8 align-items-md-center">
+                    <p class="text-white">Determine whether the value of K is present.</p>
+                </div>
+                <div class="col-8 align-items-md-center">
+                    <p class="text-white">Enter a whole number in each box.</p>
+                </div>
             </div>
         </div>
     </section>
     <hr />
     <section>
         <div class="container">
-            <div class="row text-left">
-                <div class="col-md-8"><input type="text" class="form-control" id="input"></div>
-                <div class="col-md-6"><lable for="button" class="text-primary"><h3>Try It!</h3></ label></div>
-                <div class="col-md-6"><button onclick="input" class="btn btn-primary" id="submit-btn">Submit</button></div>
-                <br />
+            <div class="row">
+                <div class="col"><input id="KValue" class="form-control" placeholder="Enter K"></div>
+                <div class="col"><input id="Input1" class="form-control" placeholder="Enter Number"></div>
+                <div class="col"><input id="Input2" class="form-control" placeholder="Enter Number"></div>
+                <div class="col"><input id="Input3" class="form-control" placeholder="Enter Number"></div>
+                <div class="col"><input id="Input4" class="form-control" placeholder="Enter Number"></div>
+                <div class="col"><input id="Input5" class="form-control" placeholder="Enter Number"></div>
             </div>
         </div>
     </section>
     <hr />
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col"><button class="btn btn-outline-light" id="submit-btn">Submit</button></div>
+            </div>
+        </div>
+    </section>
 
 
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", DoSearchK());
 
+            let K = parseInt(document.getElementById("KValue").value);
+            let Input1 = parseInt(document.getElementById("Input1").value);
+            let Input2 = parseInt(document.getElementById("Input2").value);
+            let Input3 = parseInt(document.getElementById("Input3").value);
+            let Input4 = parseInt(document.getElementById("Input4").value);
+            let Input5 = parseInt(document.getElementById("Input5").value);
+
+        function DoSearchK() {
+
+
+            document.getElementById("txtInputIn").addEventListener("keydown", function (e) {
+
+                var charater = (e.which) ? e.which : e.keyCode;
+                console.log(charater)
+
+                if (charater >= 97 && charater <= 122 ||
+                    charater >= 65 && charater <= 90 || charater == 8) {
+                    return true;
+                }
+                else {
+                    e.preventDefault();
+                    return false;
+                }
+
+    </script>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
