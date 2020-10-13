@@ -76,6 +76,7 @@
     <Content Include="Fonts\fa-brands-400.svg" />
     <Content Include="Fonts\fa-regular-400.svg" />
     <Content Include="Fonts\fa-solid-900.svg" />
+    <Content Include="Solve.html" />
     <Content Include="Scripts\breakpoints.min.js" />
     <Content Include="Scripts\browser.min.js" />
     <Content Include="Scripts\fontawesome-all.min.css" />
@@ -96,9 +97,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Content\Page1.xaml.cs">
-      <DependentUpon>starter-template.css</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
