@@ -17,7 +17,6 @@
     <link href="Content/starter-template.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="Content/starter-template.css" rel="stylesheet" />
 
 </head>
 
@@ -42,13 +41,13 @@
                         <a class="nav-link" href="Solve.html">Solve</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Code</a>
+                        <a class="nav-link" href="Code.txt">Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Git</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
+                        <a class="nav-link" href="//ojolmo-fs-portfolio.netlify.app">Portfolio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blog Post</a>
@@ -62,7 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col align-content-center text-warning"><h1>The Sum of All Fears Challenge</h1></div>
-             </div>
+            </div>
         </div>
     </section>
     <hr />
@@ -97,48 +96,49 @@
         </div>
     </section>
 
-<script>
-    function SOAF() {
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-        //Step 1: Get user data.
-        let k = parseInt(document.getElementById(kValue).value);
-        let givenArray = [10, 15, 3, 7];
-        let trueOrFalseResult = false; //Boolean value, equates to true or false
+    <script>
+        function SOAF() {
 
-        //Step 2: Run Algo
+            //Step 1: Get user data.
+            let k = parseInt(document.getElementById(kValue).value);
+            let givenArray = [10, 15, 3, 7];
+            let trueOrFalseResult = false; //Boolean value, equates to true or false
 
-        for (let i = 0; i < array.lenght - 1; i++) {
-            for (let x = (i + 1); x < givenArray.length; x++) {   //Nested loop; since we added 1 to the index, we have to subtract 1 from the length
-                if (k == givenArray[i + givenArray[x]])    //If k(17) is the same value as index i + index x, output = true
-                    trueOrFalseResult = true;
+            //Step 2: Run Algo
+
+            for (let i = 0; i < array.lenght - 1; i++) {
+                for (let x = (i + 1); x < givenArray.length; x++) {   //Nested loop; since we added 1 to the index, we have to subtract 1 from the length
+                    if (k == givenArray[i + givenArray[x]])    //If k(17) is the same value as index i + index x, output = true
+                        trueOrFalseResult = true;
                 }
 
             }
         }
         document.getElementById("output").innerHTML = `${trueOrFalseResult.toString()}`;
 
-    document.getElementById("txtInputIn").addEventListener("keydown", function (e) {
+        document.getElementById("txtInputIn").addEventListener("keydown", function (e) {
 
-        var character = (e.which) ? e.which : e.keyCode;
-        console.log(character)
+            var character = (e.which) ? e.which : e.keyCode;
+            console.log(character)
 
-        if (character >= 97 && character <= 122 ||
-            character >= 65 && character <= 90 || character == 8) {
-            return true;
-        }
-        else {
-            e.preventDefault();
-            return false;
-        }
+            if (character >= 97 && character <= 122 ||
+                character >= 65 && character <= 90 || character == 8) {
+                return true;
+            }
+            else {
+                e.preventDefault();
+                return false;
+            }
 
-    });
+        });
 
-</script>
+    </script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 </body>>
