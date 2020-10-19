@@ -78,7 +78,6 @@
     <Content Include="Fonts\fa-regular-400.svg" />
     <Content Include="Fonts\fa-solid-900.svg" />
     <Content Include="Images\brushedMetal-bg.png" />
-    <Content Include="Solve.html" />
     <Content Include="Scripts\breakpoints.min.js" />
     <Content Include="Scripts\browser.min.js" />
     <Content Include="Scripts\fontawesome-all.min.css" />
@@ -95,7 +94,6 @@
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Images\Sum Challenge-bg2.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
