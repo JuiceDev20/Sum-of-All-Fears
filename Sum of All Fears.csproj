@@ -77,6 +77,7 @@
     <Content Include="Fonts\fa-brands-400.svg" />
     <Content Include="Fonts\fa-regular-400.svg" />
     <Content Include="Fonts\fa-solid-900.svg" />
+    <Content Include="Images\brushedMetal-bg.png" />
     <Content Include="Solve.html" />
     <Content Include="Scripts\breakpoints.min.js" />
     <Content Include="Scripts\browser.min.js" />
