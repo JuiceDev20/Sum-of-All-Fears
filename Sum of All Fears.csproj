@@ -77,7 +77,8 @@
     <Content Include="Fonts\fa-brands-400.svg" />
     <Content Include="Fonts\fa-regular-400.svg" />
     <Content Include="Fonts\fa-solid-900.svg" />
-    <Content Include="Images\brushedMetal-bg.png" />
+    <Content Include="Images\SumFears-bg3.png" />
+    <Content Include="Index.html" />
     <Content Include="Scripts\breakpoints.min.js" />
     <Content Include="Scripts\browser.min.js" />
     <Content Include="Scripts\fontawesome-all.min.css" />
@@ -88,7 +89,7 @@
     <Content Include="Scripts\README.txt" />
     <Content Include="Scripts\util.js" />
     <Content Include="favicon.ico" />
-    <Content Include="Index.html" />
+    <Content Include="Solve.html" />
     <Content Include="Images\favicon-32x32.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />

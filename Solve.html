@@ -31,14 +31,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/Index.html" />
 
                         Home
                         <a href="#" Portfolio />
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/Solve.html">Solve</a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Solve</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Code.txt">Code</a>
@@ -66,19 +66,62 @@
         <div class="container">
             <div class="row">
                 <div class="col-8 align-items-md-center">
-                    <p class="text-white">The object of this challenge is to determine whether the value of K is present in the array.</p>
+                    <p class="text-white">The object of this challenge is to determine whether the value of K is present.</p>
+                </div>
+                <div class="col-8 align-items-md-center">
+                    <p class="text-white">Enter a whole number in the box below.</p>
                 </div>
             </div>
         </div>
     </section>
-   
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-3-medium"><input id="kValue" class="form-control" placeholder="Enter k"></div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-9"><button class="btn btn-success" id="submit-btn">Submit</button></div>
+                <div class="col-3"><button type="button" onclick="ClearAll()" class="btn btn-danger btn elWide" id="clear">Clear</button></div>
+                <div><p id="output"></p></div>
+            </div>
+        </div>
+    </section>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-   
+    <script>
+        function SOAF() {
+
+            //Step 1: Get user data.
+            let k = parseInt(document.getElementById(kValue).value);
+            let givenArray = [10, 15, 3, 7]
+
+            //Step 2: Run Algo
+            for (let i = 0; i < array.lenght; i++) {
+                for (let x = (i + 1); x < givenArray.length; x++) {   //Nested loop; since we added 1 to the index, we have to subtract 1 from the length
+                    if (k == givenArray[i + givenArray[x]])    //If k(17) is the same value as index i + index x, output = true
+                       return true;
+                }
+
+            }
+        }
+
+        document.getElementById("output").innerHTML = `${output}`;
+
+    </script>
+
+    <script>
+        function ClearAll() {
+            document.getElementById("kValue").value = "";
+            document.getElementById("output").innerText = "";
+
+        }
+
+    </script>
 
 
 </body>>
