@@ -10,11 +10,9 @@
 
 
     <!-- Bootstrap core CSS -->
-    <link href="/Content/bootstrap-grid.css" rel="stylesheet" />
-    <link href="/Content/bootstrap-grid.min.css" rel="stylesheet" />
-    <link href="/Content/bootstrap-reboot.min.css" rel="stylesheet" />
-    <link href="/Content/bootstrap.min.css" rel="stylesheet" />
+   <link href="/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="/Content/starter-template.css" rel="stylesheet" />
+
 
     <!-- Custom styles for this template -->
 
@@ -41,7 +39,7 @@
                         <a class="nav-link" href="#">Solve</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Code.txt">Code</a>
+                        <a class="nav-link" href="/Code.html">Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Git</a>
@@ -77,40 +75,56 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-3-medium"><input id="kValue" class="form-control" placeholder="Enter k"></div>
+                <div class="col-3-medium"><input id="kValue" class="form-control" placeholder="Enter K"></div>
             </div>
             <hr />
             <div class="row">
                 <div class="col-9"><button class="btn btn-success" id="submit-btn">Submit</button></div>
-                <div class="col-3"><button type="button" onclick="ClearAll()" class="btn btn-danger btn elWide" id="clear">Clear</button></div>
-                <div><p id="output"></p></div>
+                <div class="col-3"><button type="button" onclick="ClearAll()" class="btn btn-danger btn elWide" id="clear">Clear</button></div>                
+            </div>
+            <hr />
+            <div class="row">
+                <div>
+                    <div class="text-primary"><p id="output"></p></div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="Scripts/jquery.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
 
     <script>
-        function SOAF() {
 
-            //Step 1: Get user data.
-            let k = parseInt(document.getElementById(kValue).value);
-            let givenArray = [10, 15, 3, 7]
+        document.getElementById("submit-btn").addEventListener("click", function () {
+            let k = parseInt(document.getElementById("kValue").value);
+            SOAF(k);
+            console.log("Hello")
+        })
 
-            //Step 2: Run Algo
-            for (let i = 0; i < array.lenght; i++) {
-                for (let x = (i + 1); x < givenArray.length; x++) {   //Nested loop; since we added 1 to the index, we have to subtract 1 from the length
-                    if (k == givenArray[i + givenArray[x]])    //If k(17) is the same value as index i + index x, output = true
-                       return true;
+        function SOAF(k) {
+
+            //Step 1: Get user data
+            let givenArray = [10, 4, 15, 23, 7]
+            let output = "";
+            //Step 2: Run Algorithm
+            for (let i = 0; i < givenArray.length; i++) {
+                for (let x = (i + 1); x < givenArray.length; x++) { //Nested loop;
+                    if (k == givenArray[i] + givenArray[x]) {   //If k = [index i] + [index x], output = true
+                        output = "Yes, kValue is Present!"
+                    }
                 }
-
             }
-        }
+            if (output == "") {
+                document.getElementById("output").innerHTML = `No, kValue is not Present`;
+            }
+            else {
+                document.getElementById("output").innerHTML = `${output}`;
+            }
 
-        document.getElementById("output").innerHTML = `${output}`;
+        };
 
     </script>
 
@@ -123,8 +137,6 @@
 
     </script>
 
-
-</body>>
- 
+</body>
 
 </html>
